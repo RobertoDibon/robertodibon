@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+{% extends './base.html' %}
+
+<head>
+    {% block title %} 
+        Roberto Dibon 
+    {% endblock %}
+
+    {% block customCSS %}
+        <link href="{{ url_for('static', filename='css/contact.css') }}" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% endblock %}
+</head>
+
+<body>
+    {% block body %}
+
+    <header class="header">
+        <a href="#" class="logo">Contact.</a>
+
+        <nav class="navbar">
+            <a href ="{{ url_for ('index') }}">Home</a>
+            <a href ="{{ url_for ('about') }}">About</a>
+            <a href ="{{ url_for ('projects') }}">Projects</a>
+            <a href ="{{ url_for ('contact') }}" class="active">Contact</a>
+        </nav>
+    </header>
+
+    <section class="main">
+        <div class="main_text">
+            <h1>Get in touch</h1>
+            <p>Send me a message and I will get back to you as soon as possible
+            </p>
+        </div>
+
+        <form action="https://api.web3forms.com/submit" method="POST" class="form-group">
+            <input type="hidden" name="access_key" value="677208b6-41cc-4ead-a31e-97ac0df171d8">
+            <input type="text" name="name" placeholder="Name" class="input" required>
+            <input type="email" name="email" placeholder="Email" class="input" required>
+            <textarea name="message" placeholder="Place your message here..." required></textarea>
+            <button type="submit">Send message </button>
+        </form>
+
+        <div class="home_smedia">
+            <a href="https://www.linkedin.com/in/robertodibon">
+                <img src="{{url_for('static', filename='img/linkedin_bw.svg')}}"> 
+            </a>
+            <a href="https://github.com/RobertoDibon">
+                <img src="{{url_for('static', filename='img/github_bw.svg')}}"> 
+            </a>
+        </div>
+    </section>
+
+    {% endblock %}
+</body>

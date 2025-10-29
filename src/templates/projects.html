@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+{% extends './base.html' %}
+
+<head>
+    {% block title %} 
+        Roberto Dibon 
+    {% endblock %}
+
+    {% block customCSS %}
+        <link href="{{ url_for('static', filename='css/projects.css') }}" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% endblock %}
+</head>
+
+<body>
+    {% block body %}
+
+    <header class="header">
+        <a href="#" class="logo">Projects.</a>
+
+        <nav class="navbar">
+            <a href ="{{ url_for ('index') }}">Home</a>
+            <a href ="{{ url_for ('about') }}">About</a>
+            <a href ="{{ url_for ('projects') }}" class="active">Projects</a>
+            <a href ="{{ url_for ('contact') }}">Contact</a>
+        </nav>
+        
+    </header>
+
+    <section class="main">
+        <div class="main_heading">    
+            <h1>My Projects</h1>
+        </div>   
+    </section>    
+    
+    <div class="portfolio">
+      <div class="container">
+        
+        <div class="card">
+          <div class="card_img_1">
+          </div>
+          <div class="card_title">
+            <a href="static/files/Readme PRA.pdf">Password Reminder App</a>
+            <a href="static/files/PRA.rar"> 
+              <img src="{{ url_for('static', filename='img/download_bw.svg') }}"">
+            </a>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="card_img_2">
+          </div>
+          <div class="card_title">
+            <a href="static/files/Readme PTWeb.pdf">Personal Trainer Website</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="s_media_container">
+      <div class="smedia">
+        <a href="https://www.linkedin.com/in/robertodibon">
+            <img src="{{url_for('static', filename='img/linkedin_bw.svg')}}"> 
+        </a>
+        <a href="https://github.com/RobertoDibon">
+            <img src="{{url_for('static', filename='img/github_bw.svg')}}"> 
+        </a>
+      </div>
+    </div>
+    
+    {% endblock %}
+</body>

@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'poppins_sb';
+    src: url('/static/fonts/Poppins-Regular.ttf') format('truetype');
+}
+
+body {
+    background: #081b29;
+    color: #ededed;
+}               
+
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 5%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    font-family: 'poppins_sb', sans-serif;
+}   
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    z-index: 2;
+}
+
+.logo {
+    position: relative;
+    font-size: 25px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.logo::before { 
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 35px;
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #00abf0;
+}
+
+
+/* Section main */
+.main {
+    height: 45vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+}
+
+
+/* Div main_heading */
+.main_heading h1 {
+    position: relative;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.main_heading h1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+}
+
+
+/* Div portfolio */
+.portfolio {
+  font-family: 'poppins_sb', sans-serif;
+  background-color: #191c32;
+}
+
+.portfolio .container {
+  height: 50vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  width: 200px;
+  background-color: #191c32;
+  margin: 16px;
+  border: 1px solid #ededed;
+}
+
+.card_img_1 {
+    width: 100%;
+    height: 200px;
+    background-image: url(../img/pra_win.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.card_img_2 {
+    width: 100%;
+    height: 200px;
+    background-image: url(../img/web_personal_trainer.JPG);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.card_title {
+  padding: 20px;
+  color: #ededed;
+  text-align: center;
+  display: column;
+  align-self: center;
+}
+
+.card_title a {
+    text-decoration: none;
+    color: #ededed;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+.card_title a:hover {
+    color: #00abf0;
+}
+
+.card_title img {
+    height: 20px;
+    width: 20px;
+    margin-left: 64px;
+}
+
+
+/* Div s_media_container */
+.s_media_container {
+    background: #081b29;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+}
+
+.smedia {
+    position: bottom;
+    bottom: 40px;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.smedia::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    z-index: 2;
+}
+
+.smedia a {
+    position: relative;
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #00abf0;
+    border-radius: 25%;
+    font-size: 20px;
+    color: #00abf0;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}   
+
+.smedia a:hover {
+    color: #081b29;
+}
+
+.smedia a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #00abf0;
+    z-index: -1;
+    transition: .5s;
+}
+
+.smedia a:hover::before { 
+    width: 100%;
+}
+
+
+/* KEYFRAMES ANIMATION */
+@keyframes showRight {
+    100% {
+        width: 0;
+    }
+}

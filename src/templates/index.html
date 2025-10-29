@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+{% extends './base.html' %}
+
+<head>
+    {% block title %} 
+        Roberto Dibon 
+    {% endblock %}
+
+    {% block customCSS %}
+        <link href="{{ url_for('static', filename='css/index.css') }}" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% endblock %}
+</head>
+
+<body>
+    {% block body %}
+
+    <header class="header">
+        <a href="#" class="logo">Robert.</a>
+
+        <nav class="navbar">
+            <a href ="{{ url_for ('index') }}" class="active">Home</a>
+            <a href ="{{ url_for ('about') }}">About</a>
+            <a href ="{{ url_for ('projects') }}">Projects</a>
+            <a href ="{{ url_for ('contact') }}">Contact</a>
+        </nav>
+    </header>
+
+    <section class="home">
+        <div class="home_content">
+            <h1>Hi, I'm Robert Dibon</h1>
+            <h3>Python Developer</h3>
+            <p>Python and Solutions in Digital Architecture
+            </p>
+            <div class="btn_box">
+                <a href="{{ url_for ('contact') }}">Hire Me</a>
+                <a href="{{ url_for ('projects') }}">My Projects</a>
+            </div>
+        </div>
+
+        <div class="home_photo">
+            <img src="{{url_for('static', filename='img/yo.jpg')}}"> 
+        </div>
+
+        <div class="home_smedia">
+            <a href="https://www.linkedin.com/in/robertodibon">
+                <img src="{{url_for('static', filename='img/linkedin_bw.svg')}}"> 
+            </a>
+            <a href="https://github.com/RobertoDibon">
+                <img src="{{url_for('static', filename='img/github_bw.svg')}}"> 
+            </a>
+        </div>
+        
+    </section>
+
+    {% endblock %}
+</body>
+
+
+
+
