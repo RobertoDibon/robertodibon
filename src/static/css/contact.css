@@ -92,7 +92,7 @@ nav a.active {
 
 /* Div main_text */
 .main {
-    height: 100vh;
+    height: 90vh;
     align-items: center;
     justify-content: space-between;
     padding: 0 10%;
