@@ -82,7 +82,7 @@ body {
 
 /* Section main */
 .main {
-    height: 45vh;
+    height: 35vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
